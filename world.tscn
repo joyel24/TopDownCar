@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://da0d388hf6o4t"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_2xlqq"]
+[ext_resource type="PackedScene" uid="uid://csbolk86m8qdh" path="res://white_car.tscn" id="2_8t5ck"]
+
+[node name="world" type="Node2D"]
+script = ExtResource("1_2xlqq")
+
+[node name="WhiteCar" parent="." instance=ExtResource("2_8t5ck")]
+position = Vector2(97, 184)
