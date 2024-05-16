@@ -1,10 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://da0d388hf6o4t"]
+[gd_scene load_steps=4 format=3 uid="uid://da0d388hf6o4t"]
 
 [ext_resource type="Script" path="res://world.gd" id="1_2xlqq"]
 [ext_resource type="PackedScene" uid="uid://csbolk86m8qdh" path="res://white_car.tscn" id="2_8t5ck"]
+[ext_resource type="Texture2D" uid="uid://de0l8e6vxbpuf" path="res://sprites/Sprite-0004.png" id="2_xrmen"]
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_2xlqq")
 
+[node name="Sprite-0004" type="Sprite2D" parent="."]
+position = Vector2(990, 311)
+scale = Vector2(2.05729, 1.99074)
+texture = ExtResource("2_xrmen")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
 [node name="WhiteCar" parent="." instance=ExtResource("2_8t5ck")]
 position = Vector2(97, 184)
+
+[node name="Camera2D" type="Camera2D" parent="WhiteCar"]

@@ -16,4 +16,5 @@ position = Vector2(-0.103896, -0.727273)
 shape = SubResource("RectangleShape2D_nwmae")
 
 [node name="WhiteCar" type="Sprite2D" parent="."]
+rotation = 1.5708
 texture = ExtResource("2_bcxao")
