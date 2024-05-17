@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 170.0
+const SPEED = 220.0
 const ROTATION_SPEED = 0.1
 
 var inertia = 0.0

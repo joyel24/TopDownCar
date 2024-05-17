@@ -3,70 +3,98 @@
 [ext_resource type="Script" path="res://world.gd" id="1_2xlqq"]
 [ext_resource type="PackedScene" uid="uid://csbolk86m8qdh" path="res://white_car.tscn" id="2_8t5ck"]
 [ext_resource type="PackedScene" uid="uid://bxjlkvbh1gbxs" path="res://wall.tscn" id="4_fr41i"]
-[ext_resource type="Texture2D" uid="uid://cgt47que2h8ba" path="res://sprites/Sprite-0001.png" id="4_jo4sf"]
 [ext_resource type="Texture2D" uid="uid://csr7wpb0oc5hp" path="res://icon.svg" id="5_7tccj"]
+[ext_resource type="Texture2D" uid="uid://451bolmw2qv4" path="res://sprites/Sprite-0002.png" id="6_a1n2b"]
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_2xlqq")
 
-[node name="wall" parent="." instance=ExtResource("4_fr41i")]
-position = Vector2(777, -113)
+[node name="Sprite-0002" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-287, 222)
+scale = Vector2(26.4056, 26.4056)
+texture = ExtResource("6_a1n2b")
 
-[node name="wall2" parent="." instance=ExtResource("4_fr41i")]
-position = Vector2(782, 458)
+[node name="walls" type="Node2D" parent="."]
 
-[node name="wall3" parent="." instance=ExtResource("4_fr41i")]
-position = Vector2(2947, -266)
+[node name="wall" parent="walls" instance=ExtResource("4_fr41i")]
+position = Vector2(269, 1652)
+rotation = 0.233973
 
-[node name="wall4" parent="." instance=ExtResource("4_fr41i")]
-position = Vector2(2952, 305)
+[node name="wall2" parent="walls" instance=ExtResource("4_fr41i")]
+position = Vector2(1408, 1856)
 
-[node name="wall5" parent="." instance=ExtResource("4_fr41i")]
-position = Vector2(2208, -259)
+[node name="wall3" parent="walls" instance=ExtResource("4_fr41i")]
+position = Vector2(2950, 1756)
+rotation = -0.297657
 
-[node name="wall6" parent="." instance=ExtResource("4_fr41i")]
-position = Vector2(2213, 312)
+[node name="wall4" parent="walls" instance=ExtResource("4_fr41i")]
+position = Vector2(4464, 873)
+rotation = -0.731301
 
-[node name="wall7" parent="." instance=ExtResource("4_fr41i")]
-position = Vector2(1554, 34)
+[node name="wall5" parent="walls" instance=ExtResource("4_fr41i")]
+position = Vector2(4716, -374)
+rotation = -1.65535
 
-[node name="wall8" parent="." instance=ExtResource("4_fr41i")]
-position = Vector2(1559, 605)
+[node name="wall6" parent="walls" instance=ExtResource("4_fr41i")]
+position = Vector2(4009, -1512)
+rotation = 0.821527
 
-[node name="Sprite-0001" type="Sprite2D" parent="."]
-position = Vector2(2203, 190)
-texture = ExtResource("4_jo4sf")
+[node name="wall7" parent="walls" instance=ExtResource("4_fr41i")]
+position = Vector2(2743, -2376)
+rotation = 0.370475
 
-[node name="wall9" parent="." instance=ExtResource("4_fr41i")]
-position = Vector2(3658, 32)
+[node name="wall8" parent="walls" instance=ExtResource("4_fr41i")]
+position = Vector2(-9124, 826)
+rotation = -0.922746
 
-[node name="wall10" parent="." instance=ExtResource("4_fr41i")]
-position = Vector2(3663, 603)
+[node name="wall9" parent="walls" instance=ExtResource("4_fr41i")]
+position = Vector2(-7316, -324)
+rotation = -0.37444
+
+[node name="wall10" parent="walls" instance=ExtResource("4_fr41i")]
+position = Vector2(-5069, -871)
+rotation = -0.126144
+
+[node name="wall11" parent="walls" instance=ExtResource("4_fr41i")]
+position = Vector2(-3426, -986)
+rotation = -0.0151878
+
+[node name="wall12" parent="walls" instance=ExtResource("4_fr41i")]
+position = Vector2(-2871, -790)
+rotation = 0.705403
+
+[node name="wall13" parent="walls" instance=ExtResource("4_fr41i")]
+position = Vector2(-1456, 505)
+rotation = 0.721706
 
 [node name="WhiteCar" parent="." instance=ExtResource("2_8t5ck")]
-position = Vector2(-252, 194)
+position = Vector2(-9475, 1511)
+rotation = -1.38307
 
 [node name="Camera2D" type="Camera2D" parent="WhiteCar"]
+position = Vector2(7.09596, -0.501915)
+zoom = Vector2(0.5, 0.5)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="WhiteCar/Camera2D"]
+[node name="CanvasLayer" type="CanvasLayer" parent="WhiteCar"]
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="WhiteCar/Camera2D/CanvasLayer"]
+[node name="TouchScreenButton" type="TouchScreenButton" parent="WhiteCar/CanvasLayer"]
 modulate = Color(1, 1, 1, 0)
 top_level = true
-position = Vector2(1270, 9.99997)
+position = Vector2(614, -290)
 scale = Vector2(8.71875, 8.40625)
 texture_normal = ExtResource("5_7tccj")
 
-[node name="TouchScreenButton2" type="TouchScreenButton" parent="WhiteCar/Camera2D/CanvasLayer"]
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="WhiteCar/CanvasLayer"]
 modulate = Color(1, 1, 1, 0)
 top_level = true
-position = Vector2(2.00012, 6)
+position = Vector2(-560, -260)
 scale = Vector2(8.71875, 8.40625)
 texture_normal = ExtResource("5_7tccj")
 
-[connection signal="pressed" from="WhiteCar/Camera2D/CanvasLayer/TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
-[connection signal="released" from="WhiteCar/Camera2D/CanvasLayer/TouchScreenButton" to="." method="_on_touch_screen_button_released"]
-[connection signal="pressed" from="WhiteCar/Camera2D/CanvasLayer/TouchScreenButton2" to="." method="_on_touch_screen_button_2_pressed"]
-[connection signal="released" from="WhiteCar/Camera2D/CanvasLayer/TouchScreenButton2" to="." method="_on_touch_screen_button_2_released"]
+[connection signal="pressed" from="WhiteCar/CanvasLayer/TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="released" from="WhiteCar/CanvasLayer/TouchScreenButton" to="." method="_on_touch_screen_button_released"]
+[connection signal="pressed" from="WhiteCar/CanvasLayer/TouchScreenButton2" to="." method="_on_touch_screen_button_2_pressed"]
+[connection signal="released" from="WhiteCar/CanvasLayer/TouchScreenButton2" to="." method="_on_touch_screen_button_2_released"]
