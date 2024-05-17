@@ -94,6 +94,13 @@ position = Vector2(-560, -260)
 scale = Vector2(8.71875, 8.40625)
 texture_normal = ExtResource("5_7tccj")
 
+[node name="Label" type="Label" parent="WhiteCar/CanvasLayer"]
+offset_left = 74.0
+offset_top = 51.0
+offset_right = 374.0
+offset_bottom = 158.0
+text = "test"
+
 [connection signal="pressed" from="WhiteCar/CanvasLayer/TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
 [connection signal="released" from="WhiteCar/CanvasLayer/TouchScreenButton" to="." method="_on_touch_screen_button_released"]
 [connection signal="pressed" from="WhiteCar/CanvasLayer/TouchScreenButton2" to="." method="_on_touch_screen_button_2_pressed"]
