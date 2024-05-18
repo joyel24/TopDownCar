@@ -11,4 +11,5 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body):
 	Global.checkpoint_valid +=1
+	queue_free()
 	pass # Replace with function body.

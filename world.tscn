@@ -18,7 +18,7 @@ texture = ExtResource("6_a1n2b")
 [node name="walls" type="Node2D" parent="."]
 
 [node name="wall" parent="walls" instance=ExtResource("4_fr41i")]
-position = Vector2(269, 1652)
+position = Vector2(292, 1674)
 rotation = 0.233973
 
 [node name="wall2" parent="walls" instance=ExtResource("4_fr41i")]
@@ -41,23 +41,23 @@ position = Vector2(4009, -1512)
 rotation = 0.821527
 
 [node name="wall7" parent="walls" instance=ExtResource("4_fr41i")]
-position = Vector2(2743, -2376)
+position = Vector2(2736, -2364)
 rotation = 0.370475
 
 [node name="wall8" parent="walls" instance=ExtResource("4_fr41i")]
-position = Vector2(-9124, 826)
+position = Vector2(-9106, 827)
 rotation = -0.922746
 
 [node name="wall9" parent="walls" instance=ExtResource("4_fr41i")]
-position = Vector2(-7316, -324)
-rotation = -0.37444
+position = Vector2(-7355, -295)
+rotation = -0.340618
 
 [node name="wall10" parent="walls" instance=ExtResource("4_fr41i")]
-position = Vector2(-5069, -871)
-rotation = -0.126144
+position = Vector2(-5119, -861)
+rotation = -0.158429
 
 [node name="wall11" parent="walls" instance=ExtResource("4_fr41i")]
-position = Vector2(-3426, -986)
+position = Vector2(-3454, -989)
 rotation = -0.0151878
 
 [node name="wall12" parent="walls" instance=ExtResource("4_fr41i")]
@@ -65,7 +65,7 @@ position = Vector2(-2871, -790)
 rotation = 0.705403
 
 [node name="wall13" parent="walls" instance=ExtResource("4_fr41i")]
-position = Vector2(-1456, 505)
+position = Vector2(-1471, 518)
 rotation = 0.721706
 
 [node name="WhiteCar" parent="." instance=ExtResource("2_8t5ck")]
@@ -99,6 +99,7 @@ offset_left = 74.0
 offset_top = 51.0
 offset_right = 374.0
 offset_bottom = 158.0
+text = " "
 
 [connection signal="pressed" from="WhiteCar/CanvasLayer/TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
 [connection signal="released" from="WhiteCar/CanvasLayer/TouchScreenButton" to="." method="_on_touch_screen_button_released"]

@@ -2,7 +2,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$WhiteCar/CanvasLayer/checkpoints_label.set("theme_override_font_sizes/font_size", 40)
+	$WhiteCar/CanvasLayer/checkpoints_label.set("theme_override_font_sizes/font_size", 60)
 	Global.rotate=0
 	if Global.reset==true:
 		Global.reset=false
@@ -23,7 +23,7 @@ func _on_area_2d_mouse_entered():
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	#print("viewport "+str(viewport))x²
-	#print("event "+str(event))
+		#print("event "+str(event))
 	##print("shape_idx "+str(shape_idx))
 	#Global.rotate = 1
 	pass # Replace with function body.
