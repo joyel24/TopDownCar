@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-const SPEED = 220.0
 const ROTATION_SPEED = 0.08
 
 var inertia = 0.0
@@ -13,7 +12,7 @@ func _physics_process(delta):
 		self.rotation += Global.rotate * ROTATION_SPEED #rotate
 
 	if Global.wall_collision == false:
-		velocity = transform.x * SPEED #* Input.get_axis("ui_down", "ui_up") #Move
+		velocity = transform.x * Global.car_speed #* Input.get_axis("ui_down", "ui_up") #Move
 		#velocity.x = move_toward(transform.x, SPEED, 10)
 		#velocity.y = move_toward(transform.y, SPEED, 10)
 		move_and_slide()
