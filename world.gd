@@ -16,7 +16,8 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	#print(score)
-	score += 1
+	if Global.checkpoint_total > Global.checkpoint_valid:
+		score += 1
 	#print(str(Global.checkpoint_total)+" "+str(Global.checkpoint_valid))
 	$WhiteCar/CanvasLayer/checkpoints_label.text = (str(Global.checkpoint_valid)+" / "+str(Global.checkpoint_total)+"\n"+str(score))
 	pass
