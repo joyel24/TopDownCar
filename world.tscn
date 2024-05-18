@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://csbolk86m8qdh" path="res://white_car.tscn" id="2_8t5ck"]
 [ext_resource type="PackedScene" uid="uid://bxjlkvbh1gbxs" path="res://wall.tscn" id="4_fr41i"]
 [ext_resource type="Texture2D" uid="uid://csr7wpb0oc5hp" path="res://icon.svg" id="5_7tccj"]
-[ext_resource type="Texture2D" uid="uid://451bolmw2qv4" path="res://sprites/Sprite-0002.png" id="6_a1n2b"]
+[ext_resource type="Texture2D" uid="uid://dtmt5tl13lkfo" path="res://sprites/Sprite-0002.png" id="6_a1n2b"]
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_2xlqq")
@@ -94,12 +94,11 @@ position = Vector2(-560, -260)
 scale = Vector2(8.71875, 8.40625)
 texture_normal = ExtResource("5_7tccj")
 
-[node name="Label" type="Label" parent="WhiteCar/CanvasLayer"]
+[node name="checkpoints_label" type="Label" parent="WhiteCar/CanvasLayer"]
 offset_left = 74.0
 offset_top = 51.0
 offset_right = 374.0
 offset_bottom = 158.0
-text = "test"
 
 [connection signal="pressed" from="WhiteCar/CanvasLayer/TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
 [connection signal="released" from="WhiteCar/CanvasLayer/TouchScreenButton" to="." method="_on_touch_screen_button_released"]

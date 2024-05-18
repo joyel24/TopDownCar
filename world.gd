@@ -2,6 +2,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$WhiteCar/CanvasLayer/checkpoints_label.set("theme_override_font_sizes/font_size", 40)
 	Global.rotate=0
 	if Global.reset==true:
 		Global.reset=false
@@ -11,7 +12,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(str(Global.checkpoint_total)+" "+str(Global.checkpoint_valid))
+	#print(str(Global.checkpoint_total)+" "+str(Global.checkpoint_valid))
+	$WhiteCar/CanvasLayer/checkpoints_label.text = (str(Global.checkpoint_valid)+" / "+str(Global.checkpoint_total))
 	pass
 
 func _on_area_2d_mouse_entered():
