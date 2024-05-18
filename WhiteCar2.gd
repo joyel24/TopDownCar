@@ -6,7 +6,7 @@ var inertia = 0.0
 
 func _physics_process(delta):
 	#print(rotation)
-	Global.rotate = Input.get_axis("ui_left", "ui_right")  #Rotate with keys
+	#Global.rotate = Input.get_axis("ui_left", "ui_right")  #Rotate with keys
 	#print("test "+str(Global.rotate))
 	if rotate:
 		self.rotation += Global.rotate * ROTATION_SPEED #rotate

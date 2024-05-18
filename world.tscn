@@ -97,8 +97,8 @@ texture_normal = ExtResource("5_7tccj")
 [node name="checkpoints_label" type="Label" parent="WhiteCar/CanvasLayer"]
 offset_left = 74.0
 offset_top = 51.0
-offset_right = 374.0
-offset_bottom = 158.0
+offset_right = 674.0
+offset_bottom = 651.0
 text = " "
 
 [connection signal="pressed" from="WhiteCar/CanvasLayer/TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]
